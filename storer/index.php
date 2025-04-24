@@ -26,6 +26,7 @@ if (empty($unseen)) {
             <div class='d-flex justify-content-center'><p><a href='collection.php' class='btn btn-outline-dark fw-bold shadow-sm w-100'>View Your Collection</a></p></div>
             <div class='d-flex justify-content-center'><p><a href='../index.php' class='btn btn-outline-dark fw-bold shadow-sm w-100'>Return back to the gallery</a></p></div>
         </div>
+        <p>pinir</p>
     ";
     exit;
 }
