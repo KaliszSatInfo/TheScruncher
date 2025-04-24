@@ -1,0 +1,15 @@
+body {
+    background: #e6e4d9 url('https://www.transparenttextures.com/patterns/natural-paper.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .card-box {
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  .btn-lg {
+    width: 100px;
+  }  
