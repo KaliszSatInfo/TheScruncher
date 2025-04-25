@@ -1,0 +1,25 @@
+.tinder-form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+    padding: 10px;
+  }
+  
+  .tinder-form button {
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    width: 45%;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tinder-form .btn-outline-success:hover {
+    background: #67c954;
+  }
+  
+  .tinder-form .btn-outline-danger:hover {
+    background: #af3a34;
+  }  

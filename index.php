@@ -7,22 +7,16 @@ $current_page = $paging_data['current_page'];
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Scrolls</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="icon.png" type="image/png">
+  <?php include(__DIR__ . '/layout/layout.php'); ?>
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body>
 
   <div class="container py-4 text-center">
-    <h1 class="mb-4">Go on, save your precious memories</h1>
+    <h1 class="mb-4">Go on, fill the gene pool</h1>
     <form action="upload.php" method="post" enctype="multipart/form-data" class="mx-auto mb-5" style="max-width:500px;">
       <input type="file" name="images[]" accept="image/*" multiple class="form-control mb-3" required>
       <button type="submit" class="btn btn-warning btn-lg w-100 fw-bold shadow-sm">✉️ Send mail</button>
     </form>
-    <p><a href="storer/" class="btn btn-outline-dark fw-bold shadow-sm w-100">Look at all these beautiful candidates</a></p>
     <div class="row g-2 justify-content-center gallery">
       <?php foreach ($images_to_display as $image): ?>
         <div class="col-6 col-sm-4 col-md-3 col-lg-2">
@@ -34,39 +28,6 @@ $current_page = $paging_data['current_page'];
     </div>
   </div>
 
-  <footer class="mt-auto py-3" style="background:#e6e4d9 url('https://www.transparenttextures.com/patterns/natural-paper.png');">
-    <div class="container text-center">
-      <?php if ($total_pages > 1): ?>
-        <nav class="d-inline-flex flex-wrap justify-content-center">
-          <?php
-          function page_button($label, $target, $enabled = true, $is_current = false) {
-            $class = $is_current ? 'btn-dark' : 'btn-outline-secondary';
-            $disabled = !$enabled ? ' disabled' : '';
-            if ($enabled) {
-              echo "<a class='btn $class mx-1' href='?page=$target'>$label</a>";
-            } else {
-              echo "<span class='btn $class mx-1$disabled'>$label</span>";
-            }
-          }
-
-          page_button('«', 1, $current_page > 1);
-          page_button('‹', $current_page - 1, $current_page > 1);
-
-          $start = max(1, $current_page - 3);
-          $end = min($total_pages, $current_page + 3);
-          for ($i = $start; $i <= $end; $i++) {
-            page_button($i, $i, true, $i == $current_page);
-          }
-
-          page_button('›', $current_page + 1, $current_page < $total_pages);
-          page_button('»', $total_pages, $current_page < $total_pages);
-          ?>
-        </nav>
-      <?php endif; ?>
-    </div>
-  </footer>
-
-  <script src="zoomer.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <?php include(__DIR__ . '/layout/footer.php'); ?>
 </body>
 </html>

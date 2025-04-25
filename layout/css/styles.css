@@ -1,0 +1,112 @@
+/* General Body and Background */
+body {
+  font-family: 'Courier New', monospace;
+  background: #e6e4d9 url('https://www.transparenttextures.com/patterns/natural-paper.png');
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1 {
+  padding-top: 30px;
+  color: #5a4e4e;
+  text-shadow: 1px 1px #fff;
+}
+
+/* Card Styling */
+.tinder-card {
+  background: #e6e4d9 url('https://www.transparenttextures.com/patterns/natural-paper.png');
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Form Styling */
+.tinder-form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+  padding: 10px;
+}
+
+.tinder-form button {
+  padding: 15px 30px;  /* Increase the size of the buttons */
+  font-size: 1.25rem;   /* Make the font bigger */
+  width: 45%;           /* Make each button take up 45% of the width */
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tinder-form .btn-outline-success {
+  background: #a67c52;
+  color: white;
+}
+
+.tinder-form .btn-outline-danger {
+  background: #c85f5c;
+  color: white;
+}
+
+.tinder-form .btn-outline-success:hover {
+  background: #8b6643;
+}
+
+.tinder-form .btn-outline-danger:hover {
+  background: #a84f4b;
+}
+
+footer {
+  background: #e6e4d9 url('https://www.transparenttextures.com/patterns/natural-paper.png');
+  border-top: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer .btn-outline-secondary {
+  color: #333;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+}
+
+footer .btn-outline-secondary:hover {
+  background: #8b6643;
+  color: #fff;
+}
+
+footer .btn-dark {
+  background: #a67c52;
+  color: white;
+}
+
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+}
+
+.zoomed-img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  z-index: 1001;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  cursor: default;
+}

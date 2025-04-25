@@ -1,0 +1,14 @@
+.tinder-card {
+    background: #e6e4d9 url('https://www.transparenttextures.com/patterns/natural-paper.png');
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }  

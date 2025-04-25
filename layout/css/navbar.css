@@ -1,0 +1,17 @@
+.navbar {
+    width: 100%;
+    background-color: #e6e4d9 url('https://www.transparenttextures.com/patterns/natural-paper.png');
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.navbar .navbar-brand:not(:last-child)::after {
+    content: "|";
+    padding-left: 15px;
+}
