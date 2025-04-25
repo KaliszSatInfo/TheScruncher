@@ -29,3 +29,5 @@
     <?php endif; ?>
   </div>
 </footer>
+</body>
+</html>

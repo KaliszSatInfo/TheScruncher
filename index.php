@@ -3,13 +3,8 @@ $paging_data = include('pager.php');
 $images_to_display = $paging_data['images_to_display'];
 $total_pages = $paging_data['total_pages'];
 $current_page = $paging_data['current_page'];
+include(__DIR__ . '/layout/layout.php'); 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <?php include(__DIR__ . '/layout/layout.php'); ?>
-</head>
-<body>
 
   <div class="container py-4 text-center">
     <h1 class="mb-4">Go on, fill the gene pool</h1>
@@ -27,7 +22,4 @@ $current_page = $paging_data['current_page'];
       <?php endforeach; ?>
     </div>
   </div>
-
-  <?php include(__DIR__ . '/layout/footer.php'); ?>
-</body>
-</html>
+<?php include(__DIR__ . '/layout/footer.php'); ?>

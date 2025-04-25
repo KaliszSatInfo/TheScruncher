@@ -22,24 +22,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $current = $unseen ? $unseen[array_rand($unseen)] : null;
 
+include(__DIR__ . '/../layout/layout.php'); 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <?php include(__DIR__ . '/../layout/layout.php'); ?>
-</head>
-<body>
-  <div class="container py-4 text-center">
+
+<div class="container py-4 text-center">
     <?php if (!$current): ?>
-      <h1 class="text-danger">You went through them all</h1>
+        <h1 class="text-danger">You went through them all</h1>
     <?php else: ?>
-      <div class="card card-box text-center mx-auto tinder-card" style="max-width:600px;">
+    <div class="card card-box text-center mx-auto tinder-card" style="max-width:600px;">
         <img src="../uploads/<?= htmlspecialchars($current) ?>" class="card-img-top" alt="Scroll Image">
         <form action="tinder.php" method="POST" class="tinder-form d-flex justify-content-center mt-3">
-          <button type="submit" name="disliked_image" value="<?= htmlspecialchars($current) ?>" class="btn btn-outline-danger mx-2">❌</button>
-          <button type="submit" name="liked_image" value="<?= htmlspecialchars($current) ?>" class="btn btn-outline-success mx-2">✅</button>
+            <button type="submit" name="disliked_image" value="<?= htmlspecialchars($current) ?>" class="btn btn-outline-danger mx-2">❌</button>
+            <button type="submit" name="liked_image" value="<?= htmlspecialchars($current) ?>" class="btn btn-outline-success mx-2">✅</button>
         </form>
-      </div>
+    </div>
     <?php endif; ?>
   </div>
 </body>

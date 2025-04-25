@@ -14,14 +14,8 @@ $current_page = max(1, min($current_page, $total_pages));
 $offset = ($current_page - 1) * $images_per_page;
 
 $images_to_display = array_slice($liked_images, $offset, $images_per_page);
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <?php include(__DIR__ . '/../layout/layout.php'); ?>
-</head>
-<body>
+include(__DIR__ . '/../layout/layout.php'); ?>
   
   <div class="container py-4 text-center flex-grow-1">
     <h1 class="mb-4">Look at your collection, splendid</h1>
@@ -36,6 +30,4 @@ $images_to_display = array_slice($liked_images, $offset, $images_per_page);
     </div>
   </div>
 
-  <?php include(__DIR__ . '/../layout/footer.php'); ?>
-</body>
-</html>
+<?php include(__DIR__ . '/../layout/footer.php'); ?>
