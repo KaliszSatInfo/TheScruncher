@@ -29,7 +29,7 @@ include(__DIR__ . '/../layout/layout.php');
     <?php if (!$current): ?>
         <h1 class="text-danger">You went through them all</h1>
     <?php else: ?>
-    <div class="card card-box text-center mx-auto tinder-card" style="max-width:600px;">
+    <div class="card card-box text-center mx-auto tinder-card">
         <img src="../uploads/<?= htmlspecialchars($current) ?>" class="card-img-top" alt="Scroll Image">
         <form action="tinder.php" method="POST" class="tinder-form d-flex justify-content-center mt-3">
             <button type="submit" name="disliked_image" value="<?= htmlspecialchars($current) ?>" class="btn btn-outline-danger mx-2">❌</button>
